@@ -1,0 +1,1 @@
+Die Datei input10 exestiert nicht oder kann nicht gelesen werden!
