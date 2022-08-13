@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Übung 4</title>
+<style>
+body {
+    margin: 30px auto;
+    max-width: 600px;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: Arial;
+}
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 0 40px 0 40px;
+}
+h2 {
+    margin: 60px 0 20px 0;
+}
+.table-header-row {
+    border-bottom: 2px solid black;
+}
+.table-footer-row {
+    border-top: 2px solid black;
+}
+.center {
+    text-align: center;
+}
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+.monospace {
+    font-family: monospace;
+}
+code {
+    border-radius: 5px;
+    padding: 3px 8px 3px 8px;
+    background-color: lightgray;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+    font-size: 85%;
+}
+.code {
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+    padding: 15px;
+    background-color: lightgray;
+    white-space: nowrap;
+    border-radius: 5px;
+    font-size: 11px;
+}
+.green {
+    color: #32a852;
+}
+.red {
+    color: #ff0000;
+}
+.orange {
+    color: #fa9e0c;
+}
+.overflow {
+    margin: 15px;
+    display: flex;
+    /*justify-content: center;*/
+}
+</style>
+</head>
+<body>
+<h1 class="center">Übung 4</h1>
+<h2 class="center">Zusammenfassung</h2>
+<table>
+<tr class="table-header-row"><th class="left">Aufgabe</th><th class="right">Bestanden</th></tr>
+<tr><td style="font-family:monospace">crypto</td><td class="right green"><b>Ja ✓ 😄</b></td>
+<tr><td style="font-family:monospace">containers</td><td class="right red"><b>Nein ✗</b></td>
+<tr><td style="font-family:monospace">binary</td><td class="right orange"><b>Knapp (✓) 😐</b></td>
+<tr class="table-footer-row"><td><b>Summe</b></td><td class="right"><b>2 / 3</b></td></tr>
+
+        <tr class="table-footer-row"><td><b>Gesamt</b></td><td class="right"><b>3 + 2 + 2 + 2 = 9 / 12</b></td></tr>
+        <tr class="table-footer-row"><td><b>Zulassung Abschlussprojekt 1</b></td><td class="right"><b>(min. 9 Punkte) <span class="green">Ja ✓ 😄</span></b></td></tr>
+        
+</table>
+<h2>Aufgabe crypto</h2>
+<div><b>Bestanden: <span class="green">Ja ✓ 😄</span></b></div>
+<div>Die Tests für diese Aufgabe liefen fehlerfrei durch.
+</div>
+<div>Auf der Standardausgabe wurde folgender Text ausgegeben:
+</div>
+<div> <div class="overflow"><div class="code">  1: Checking code style of crypto.c<br><br>	OK: Code style test passed.<br><br><br><br>./crypto --bitcoin 1<br>52586.02<br><br>OK: Output files/output_1_bitcoin.txt matches expected output files/expected_output_one_bitcoin.txt.<br><br>./crypto -b 1.0<br>52586.02<br><br>OK: Output files/output_1.0_bitcoin.txt matches expected output files/expected_output_one_bitcoin.txt.<br><br>./crypto --bitcoin 1.00<br>52586.02<br><br>OK: Output files/output_1.00_bitcoin.txt matches expected output files/expected_output_one_bitcoin.txt.<br><br>./crypto --bitcoin 1.000000000<br>52586.02<br><br>OK: Output files/output_1.000000000_bitcoin.txt matches expected output files/expected_output_one_bitcoin.txt.<br><br>./crypto --bitcoin 0.5 --bitcoin 0.5<br>52586.02<br><br>OK: Output files/output_0.5_plus_0.5_bitcoin.txt matches expected output files/expected_output_one_bitcoin.txt.<br><br>./crypto --doge 100<br>27.00<br><br>OK: Output files/output_100_doge.txt matches expected output files/expected_output_100_doge.txt.<br><br>./crypto --xmr 0.01<br>2.28<br><br>OK: Output files/output_0.01_xmr.txt matches expected output files/expected_output_0.01_xmr.txt.<br><br>./crypto --filecoin 1.0<br>49.74<br><br>OK: Output files/output_1_filecoin.txt matches expected output files/expected_output_1_filecoin.txt.<br><br>./crypto --ethereum 1.0<br>3590.12<br><br>OK: Output files/output_1_ethereum.txt matches expected output files/expected_output_1_ethereum.txt.<br><br>./crypto<br>0.00<br><br>OK: Output files/output_zero.txt matches expected output files/expected_output_zero.txt.<br><br>./crypto --btc 0.0<br>0.00<br><br>OK: Output files/output_0_btc.txt matches expected output files/expected_output_zero.txt.<br><br>./crypto --bitcoin 1 --btc 1 -b 1 --dogecoin 1 --doge 1 -d 1 --ethereum 1 --eth 1 -e 1 --filecoin 1 --fil 1 -f 1 --monero 1 --xmr 1 -x 1 -m 1<br>169589.37<br><br>OK: Output files/output_all.txt matches expected output files/expected_output_all.txt.<br><br>./crypto --monero 7.57954 --btc 258.91675 -m 0.04049 -m 0.00358 --doge 0.00003 -e 987.25920 --doge 0.00003 --fil 0.00005 -f 4341.71835 --ethereum 96.66064 -x 0.08653 --btc 805.02783 --bitcoin 0.93272 --bitcoin 0.61190 --eth 0.00007 --ethereum 0.00917 --eth 0.00080 -x 0.09122 -m 109.05785 --filecoin 706.56141<br>60198988.51<br><br>OK: Output files/output_random.txt matches expected output files/expected_output_random.txt.<br><br>./crypto --btc<br>	OK: Return value is 1 as expected.<br>	OK: Something has been written to stderr.<br><br>./crypto --ethereum 1 --doge<br>	OK: Return value is 1 as expected.<br>	OK: Something has been written to stderr.<br><br>./crypto --btc<br>	OK: Return value is 1 as expected.<br>	OK: Something has been written to stderr.<br><br>./crypto --btc<br>	OK: Return value is 1 as expected.<br>	OK: Something has been written to stderr.<br><br>./crypto --potato 1<br>	OK: Return value is 2 as expected.<br>	OK: Something has been written to stderr.<br><br>./crypto --bitcoin 1 --seashells 5<br>	OK: Return value is 2 as expected.<br>	OK: Something has been written to stderr.<br><br>./crypto --bitcoin seven<br>	OK: Return value is 3 as expected.<br>	OK: Something has been written to stderr.<br><br>./crypto --bitcoin --bitcoin<br>	OK: Return value is 3 as expected.<br>	OK: Something has been written to stderr.</div></div></div>
+<div></div>
+<h3>Anmerkungen</h3>
+<div><code>// wegen euren beschissenen edge-case zu monero......</code> - Den Grenzfall hätte man leicht vermeiden können, indem man über Name-Preis-Paare iteriert, anstatt vorher noch nach Währung zu trennen. Dies würde auch unvermeidbar werden, wenn weitere Währungseinheiten mit gleichem Anfangsbuchstaben hinzugefügt würden.</div>
+<h2>Aufgabe containers</h2>
+<div><b>Bestanden: <span class="red">Nein ✗</span></b></div>
+<div>Die Tests sind fehlgeschlagen mit Fehlercode 1.
+</div>
+<div>Test-Befehl:
+</div>
+<div> <div class="overflow"><div class="code">bash test.sh</div></div></div>
+<div></div>
+<div>Auf der Standardausgabe wurde folgender Text ausgegeben:
+</div>
+<div> <div class="overflow"><div class="code">OK: Pruefsummen sind korrekt.<br>  1: Checking code style of main.c<br><br>ERROR: Code style violation in file:<br>    main.c<br><br>More &#x27;{&#x27; than &#x27;}&#x27; in file.<br><br>  2: Checking code style of containers.h<br><br>	OK: Code style test passed.<br><br>FEHLER: Der Codestyle entspricht nicht den Vorgaben.</div></div></div>
+<div></div>
+<h2>Aufgabe binary</h2>
+<div><b>Bestanden: <span class="orange">Knapp (✓) 😐</span></b></div>
+<div>Mit Abstand die langsamste aller Lösungen, aber wird noch gerade so innerhalb des Zeitlimits fertig.</div></body>
+</html>
+
